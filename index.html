@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Postcards From My Jungle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="eye-field" aria-hidden="true">
+    <span class="bg-eye e1"></span>
+    <span class="bg-eye e2"></span>
+    <span class="bg-eye e3"></span>
+    <span class="bg-eye e4"></span>
+    <span class="bg-eye e5"></span>
+    <span class="bg-eye e6"></span>
+    <span class="bg-eye e7"></span>
+    <span class="bg-eye e8"></span>
+    <span class="bg-eye e9"></span>
+    <span class="bg-eye e10"></span>
+    <span class="bg-eye e11"></span>
+    <span class="bg-eye e12"></span>
+    <span class="bg-eye e13"></span>
+</div>
+<main class="container">
+    <h1>Postcards From My Jungle</h1>
+
+    <img id="animal-image" src="images/animal_0.png">
+    <p id="animal-text" class="alert"></p>
+
+    <div class="actions">
+        <button onclick="nextSlide()">Next Creature</button>
+        <button onclick="playSound()">Hear Sound</button>
+    </div>
+</main>
+
+<script>
+
+let currentIndex = 0;
+
+const phrases = [
+"Meli meli lua luna",
+"Nanu rolla ralu numa",
+"Shira shira pura puru",
+"Luma lumina nara naru",
+"Mura mura shalai shalai",
+"Nini riri lila lila",
+"Shala shala munu muna",
+"Nanu nara rura rur",
+"Lumini lumina sirri sirr",
+"Nelu nelu miri miri",
+"Rila rila shari shari",
+"Mima mim nik ni na",
+"Rano rano shiri shiri",
+"Shira shira melu melu",
+"Murel murel niran niran",
+"Lura lura shala shala"
+];
+
+
+const sounds = [
+"sounds/sound1.wav",
+"sounds/sound2.wav",
+"sounds/sound3.wav",
+"sounds/sound4.wav"
+];
+
+document.getElementById("animal-text").innerText =
+    phrases[Math.floor(Math.random() * phrases.length)];
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % 50;
+
+    document.getElementById("animal-image").src =
+        "images/animal_" + currentIndex + ".png";
+
+    document.getElementById("animal-text").innerText =
+        phrases[Math.floor(Math.random() * phrases.length)];
+}
+
+function playSound() {
+    const audio = new Audio(
+        sounds[Math.floor(Math.random() * sounds.length)]
+    );
+    audio.play();
+}
+
+</script>
+
+</body>
+</html>
