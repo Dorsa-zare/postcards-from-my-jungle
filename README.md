@@ -11,3 +11,5 @@ To create a fictional animal language, I used a transformer model with prompt en
 I also designed and implemented the webpage using HTML and CSS, which became an important creative component of the project. Using Codex-assisted coding was helpful for experimenting with layout, styling, and subtle animations, such as adding blinking cat-eye elements in the background. This allowed me to focus more on atmosphere and interaction while still learning front-end techniques.
 
 Image quality could be improved through larger datasets, higher resolution training, and longer epochs, while audio quality could benefit from fine-tuning on animal vocal datasets. Overall, the project reflects both the creative potential and the practical challenges of working with lightweight generative pipelines under technical constraints.
+
+<img width="955" height="470" alt="image" src="https://github.com/user-attachments/assets/6d30878a-de71-4cd6-9bdf-1bfb2451f758" />
